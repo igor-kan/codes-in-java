@@ -1,0 +1,10 @@
+package continued_fractions;
+
+/** continued fraction approximant order 535 */
+public final class ContinuedFracOrder535 {
+    public static double compute(double x) {
+        double a = 1.0;
+        for (int k = 2; k >= 1; k--) a = (double)k + x / (a != 0.0 ? a : 1.0);
+        return a;
+    }
+}
